@@ -1,6 +1,6 @@
 import os
-# Specify the folder path /home/sysop/Documents/luka_temp/shtl  / C:/Users/xuligan/Desktop/python sc/shtl
-folder_path = '/home/sysop/Documents/luka_temp/mzeg'
+# Specify the folder path  
+folder_path = '/home/'
 
 # Get a list of files in the folder
 files = os.listdir(folder_path)
@@ -18,10 +18,10 @@ for i in file_list:
         readFile = f.read()
         # SOS xazebi ar auriot 
         # pirvel listshi unknown shecvla / anu pirvleli unknown
-        readFile = readFile.replace('-Unknown-                                                   MARKER NAME','MZEG                                                        MARKER NAME\nMzetamze                                                    MARKER NUMBER') 
+        readFile = readFile.replace('####','####') 
         # meore listshi pirvlei 
-        readFile = readFile.replace('-Unknown-           -Unknown-                               OBSERVER / AGENCY','IES and NSMC        Ilia State University                   OBSERVER / AGENCY')
+        readFile = readFile.replace('####','####')
         # mesame listshi meore
-        readFile = readFile.replace('-Unknown-           -Unknown-                               ANT # / TYPE','762-12439           TPSCR.G5            TPSH                ANT # / TYPE') 
+        readFile = readFile.replace('####','####') 
     with open(f'{i}','w') as file:
         file.write(readFile)
